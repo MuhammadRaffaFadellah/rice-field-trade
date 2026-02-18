@@ -7,7 +7,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/regist', [RegisterController::class, 'index'])->name('register.index');
-Route::post('/regist', [RegisterController::class, 'store'])->name('register.store');
+Route::get('/register', [RegisterController::class, 'index'])->name('register.index');
+Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
 
 Route::get('/login', fn() => view('auth.login'))->name('login');

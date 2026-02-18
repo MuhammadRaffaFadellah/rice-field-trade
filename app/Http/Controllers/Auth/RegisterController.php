@@ -15,8 +15,9 @@ class RegisterController extends Auth
      */
     public function index()
     {
-        
-        return view('auth.register');
+        $roles = Role::where('id', '!=', 1)->get();
+
+        return view('auth.register', compact('roles'));
     }
 
     /**
